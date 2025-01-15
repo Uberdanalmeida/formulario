@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(imagem/planodefundo.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+#cadastro {
+    background-color: rgb(9, 92, 103);
+    height: 435px;
+    width: 400px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+p { 
+    display: flex;
+    height: 35px;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    padding: 5px;
+    gap: 10px;    
+}
+
+input {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+span {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.403);
+}
+
+@media (max-width: 480px) {
+    body {
+        display: flex;
+    }
+
+    span {
+        color: yellow;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #cadastro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+    }
+}

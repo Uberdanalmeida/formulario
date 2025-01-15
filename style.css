@@ -26,6 +26,20 @@ h2 {
     margin-bottom: 15px;
 }
 
+button {
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: grey;
+}
+
 a {
     color: yellow;
     text-decoration: none;

@@ -68,7 +68,12 @@ span {
 
 @media (max-width: 480px) {
     body {
+        background-color: white; 
+        background-image: none;
         display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
     }
 
     span {
@@ -84,8 +89,9 @@ span {
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 100vh;
-        width: 100vw;
+        border-radius: 20px 20px 0 0;
+        height: 90%;
+        width: 95%;
     }
 
     button {

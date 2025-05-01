@@ -107,4 +107,8 @@ span {
         background-color: black;
         color: white;
     }
+
+    svg {
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-![Formulario simples](imagem/projeto-formulario.png)
+![Formulario simples](imagem/projetoFormulario.png)
 
 # Projeto Formulário de Cadastro
 

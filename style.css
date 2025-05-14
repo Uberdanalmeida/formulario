@@ -77,34 +77,35 @@ span {
     }
 
     span {
-        color: white;
+        color: black;
         font-weight: 500;
     }
 
     h1 {
-        padding-bottom: 15px;
+        padding-bottom: 50px;
     }
 
     h2 {
         font-size: 24px;
+        padding-top: 45px;
     }
 
     #cadastro {
-        background-color: rgb(143, 88, 170);
+        background-color: rgba(0, 0, 255, 0.199);
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 93%;
-        width: 93%;
+        height: 100vh;
+        width: 100vw;
     }
 
     button {
         margin-top: 10px;
         padding: 5px;
         width: 80px;
-        background-color: white;
-        color: black;
+        background-color: blue;
+        color: white;
         font-size: 15px;
     }
 
@@ -118,7 +119,7 @@ span {
     }
 
     a {
-        color: wheat;
+        color: rgb(0, 17, 255);
     }
     
 }

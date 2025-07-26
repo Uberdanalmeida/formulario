@@ -99,13 +99,18 @@ span {
         padding-top: 45px;
     }
 
+    input {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
     #cadastro {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         height: 80vh;
-        width: 85vw;
+        width: 90vw;
     }
 
     button {

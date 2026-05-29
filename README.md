@@ -14,9 +14,9 @@ O projeto foi criado para demonstrar um formulário básico de cadastro, com val
 - Design responsivo para dispositivos móveis.
 - Botão de envio.
 - Link para cadastro caso tenha esquecido a senha.
-- Ícones SVG para cada input.
 
 ## Tecnologias Utilizadas
 
 - HTML5
 - CSS3
+- JavaScript

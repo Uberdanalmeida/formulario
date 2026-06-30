@@ -1,36 +1,266 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto-Formulario</title>
+    <title>Login / Cadastro Profissional</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="cadastro">
-      <form action="" id="formulario">
-        <h1>Preencha o formulario</h1>
+    <main class="page-shell">
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="form-branding">
+          <span class="brand-badge">PRO</span>
+          <h1 id="form-title">Bem-vindo</h1>
+          <p class="form-intro">
+            Entre na sua conta ou crie um acesso seguro para começar.
+          </p>
+          <div
+            class="form-tabs"
+            role="tablist"
+            aria-label="Selecione entre entrar ou cadastrar"
+          >
+            <button type="button" class="tab-button active" data-view="login">
+              <span class="tab-icon">🔒</span>Entrar
+            </button>
+            <button type="button" class="tab-button" data-view="register">
+              <span class="tab-icon">👤</span>Cadastrar
+            </button>
+          </div>
+        </div>
 
-        <p><span>Nome:</span><input type="text" name="" id="nome" /></p>
-        <p>
-          <span>Data de Nascimento:</span><input type="date" name="" id="nascimento" />
-        </p>
-        <p><span>Email:</span><input type="email" name="" id="email" /></p>
-        <p><span>Telefone:</span><input type="number" name="" id="telefone" /></p>
+        <div class="form-content">
+          <form id="login-form" class="auth-form active" novalidate>
+            <div class="form-group">
+              <label for="login-email"
+                ><span class="field-icon">📧</span>E-mail</label
+              >
+              <input
+                type="email"
+                id="login-email"
+                name="login-email"
+                placeholder="seu@email.com"
+                required
+              />
+              <span class="error-message" id="login-email-error"></span>
+            </div>
+            <div class="form-group password-field">
+              <label for="login-senha"
+                ><span class="field-icon">🔑</span>Senha</label
+              >
+              <input
+                type="password"
+                id="login-senha"
+                name="login-senha"
+                placeholder="Digite sua senha"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="login-senha"
+                aria-label="Mostrar senha"
+              >
+                👁
+              </button>
+              <span class="error-message" id="login-senha-error"></span>
+            </div>
+            <button type="submit" class="submit-button">Entrar</button>
+            <p class="form-footer">
+              <button
+                type="button"
+                class="link-button"
+                data-toggle-form="recover"
+              >
+                Esqueci a senha
+              </button>
+            </p>
+            <p class="form-footer">
+              Ainda não tem conta?
+              <button
+                type="button"
+                class="link-button"
+                data-toggle-form="register"
+              >
+                Cadastrar
+              </button>
+            </p>
+          </form>
 
-        <p>
-          <span>Sexo:</span> Masculino
-          <input type="radio" name="sex" id="masculino" /> Feminino
-          <input type="radio" name="sex" id="feminino" />
-        </p>
+          <form id="recovery-form" class="auth-form" novalidate>
+            <div class="form-group">
+              <label for="recovery-email">E-mail</label>
+              <input
+                type="email"
+                id="recovery-email"
+                name="recovery-email"
+                placeholder="Digite seu e-mail cadastrado"
+                required
+              />
+              <span class="error-message" id="recovery-email-error"></span>
+            </div>
+            <div
+              class="recovery-note"
+              id="recovery-message"
+              aria-live="polite"
+            ></div>
+            <button type="submit" class="submit-button">Recuperar senha</button>
+            <p class="form-footer">
+              Lembrou?
+              <button
+                type="button"
+                class="link-button"
+                data-toggle-form="login"
+              >
+                Voltar
+              </button>
+            </p>
+          </form>
 
-        <p><span>Senha:</span> <input type="password" name="" id="senha" /></p>
+          <form id="register-form" class="auth-form" novalidate>
+            <div class="form-group">
+              <label for="nome"
+                ><span class="field-icon">👤</span>Nome completo</label
+              >
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+              />
+              <span class="error-message" id="nome-error"></span>
+            </div>
 
-        <button>ENTRAR</button>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nascimento"
+                  ><span class="field-icon">📅</span>Data de nascimento</label
+                >
+                <input type="date" id="nascimento" name="nascimento" required />
+                <span class="error-message" id="nascimento-error"></span>
+              </div>
 
-        <h2>Esqueceu a senha? <a href="#">Cadastrar</a></h2>
-      </form>
-    </div>
+              <div class="form-group">
+                <label for="telefone"
+                  ><span class="field-icon">📱</span>Telefone</label
+                >
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(00) 00000-0000"
+                />
+                <span class="error-message" id="telefone-error"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="register-email"
+                ><span class="field-icon">📧</span>E-mail</label
+              >
+              <input
+                type="email"
+                id="register-email"
+                name="register-email"
+                placeholder="seu@email.com"
+                required
+              />
+              <span class="error-message" id="register-email-error"></span>
+            </div>
+
+            <fieldset class="form-group gender-group">
+              <legend>Sexo</legend>
+              <label>
+                <input type="radio" name="sexo" value="Masculino" required />
+                Masculino
+              </label>
+              <label>
+                <input type="radio" name="sexo" value="Feminino" />
+                Feminino
+              </label>
+              <label>
+                <input type="radio" name="sexo" value="Outro" />
+                Outro
+              </label>
+              <span class="error-message" id="sexo-error"></span>
+            </fieldset>
+
+            <div class="form-group password-field">
+              <label for="senha"><span class="field-icon">🔒</span>Senha</label>
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Crie uma senha segura"
+                required
+                minlength="8"
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="senha"
+                aria-label="Mostrar senha"
+              >
+                👁
+              </button>
+              <span class="error-message" id="senha-error"></span>
+            </div>
+            <button type="submit" class="submit-button">Cadastrar</button>
+            <p class="form-footer">
+              Já possui conta?
+              <button
+                type="button"
+                class="link-button"
+                data-toggle-form="login"
+              >
+                Entrar
+              </button>
+            </p>
+          </form>
+
+          <div
+            id="welcome-screen"
+            class="welcome-screen hidden"
+            aria-live="polite"
+          >
+            <div class="dashboard-header">
+              <div>
+                <h2>Seja bem-vindo!</h2>
+                <p class="welcome-copy">
+                  Aqui está seu painel rápido com detalhes importantes da conta.
+                </p>
+              </div>
+              <button type="button" id="logout-button" class="submit-button">
+                Sair
+              </button>
+            </div>
+            <div class="dashboard-grid">
+              <article class="dashboard-card">
+                <span class="card-icon">👤</span>
+                <p class="card-label">Nome</p>
+                <p class="card-value" id="dash-name"></p>
+              </article>
+              <article class="dashboard-card">
+                <span class="card-icon">📧</span>
+                <p class="card-label">E-mail</p>
+                <p class="card-value" id="dash-email"></p>
+              </article>
+              <article class="dashboard-card">
+                <span class="card-icon">📅</span>
+                <p class="card-label">Data de nascimento</p>
+                <p class="card-value" id="dash-birth"></p>
+              </article>
+              <article class="dashboard-card">
+                <span class="card-icon">📱</span>
+                <p class="card-label">Telefone</p>
+                <p class="card-value" id="dash-phone"></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

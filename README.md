@@ -1,21 +1,39 @@
-![Formulario simples](imagem/formulario.png)
+# Projeto Login e Cadastro Profissional
 
-# Projeto Formulário de Cadastro
+Este projeto oferece uma interface completa de autenticação, com telas de login e cadastro integradas em um único painel.
 
-Este projeto consiste em um formulário de cadastro simples, desenvolvido com HTML e CSS. O formulário inclui campos para nome, data de nascimento, e-mail, telefone, sexo e senha. O projeto também inclui um design responsivo para dispositivos móveis.
+## O que foi melhorado
 
-## Descrição
-
-O projeto foi criado para demonstrar um formulário básico de cadastro, com validações simples de campos e design responsivo. Ele pode ser usado como ponto de partida para projetos mais complexos que necessitem de formulários de cadastro.
+- Interface de login e cadastro com alternância entre as telas.
+- Validação do formulário no cliente para todos os campos.
+- Armazenamento de contas no `localStorage` do navegador.
+- Feedback de erros em cada campo.
+- Tela de boas-vindas após login bem-sucedido.
 
 ## Funcionalidades
 
-- Formulário de cadastro com campos para nome, data de nascimento, e-mail, telefone, sexo e senha.
-- Design responsivo para dispositivos móveis.
-- Botão de envio.
-- Link para cadastro caso tenha esquecido a senha.
+- Cadastro de usuário com nome, data de nascimento, telefone, sexo, e-mail e senha.
+- Login usando e-mail e senha.
+- Prevenção de cadastro com e-mail duplicado.
+- Simulação de sessão com tela de boas-vindas.
+- Alternância rápida entre login e cadastro.
 
-## Tecnologias Utilizadas
+## Como usar
+
+1. Abra `index.html` em um navegador.
+2. Use a aba **Entrar** para acessar uma conta existente.
+3. Use a aba **Cadastrar** para criar uma nova conta.
+4. Após cadastro, o formulário leva você automaticamente para a tela de login.
+5. Ao efetuar login, a aplicação exibe uma tela de boas-vindas.
+
+## Estrutura do projeto
+
+- `index.html` — interface de login e cadastro.
+- `style.css` — layout moderno e responsivo.
+- `script.js` — lógica de alternância, validação e armazenamento.
+- `imagem/` — pasta de imagens.
+
+## Tecnologias
 
 - HTML5
 - CSS3

@@ -1,40 +1,45 @@
-# Projeto Login e Cadastro Profissional
+# 🔐 Formulário de Login e Cadastro
 
-Este projeto oferece uma interface completa de autenticação, com telas de login e cadastro integradas em um único painel.
+Uma aplicação web completa e profissional de autenticação de usuários com interface intuitiva e responsiva.
 
-## O que foi melhorado
+---
 
-- Interface de login e cadastro com alternância entre as telas.
-- Validação do formulário no cliente para todos os campos.
-- Armazenamento de contas no `localStorage` do navegador.
-- Feedback de erros em cada campo.
-- Tela de boas-vindas após login bem-sucedido.
+## 📋 Sobre o Projeto
 
-## Funcionalidades
+Este projeto implementa um sistema completo de autenticação com telas de login e cadastro integradas em um único painel. A aplicação oferece uma experiência de usuário fluida, com validação em tempo real, armazenamento seguro de dados no navegador e feedback visual para cada ação do usuário.
 
-- Cadastro de usuário com nome, data de nascimento, telefone, sexo, e-mail e senha.
-- Login usando e-mail e senha.
-- Prevenção de cadastro com e-mail duplicado.
-- Simulação de sessão com tela de boas-vindas.
-- Alternância rápida entre login e cadastro.
+---
 
-## Como usar
+## ✨ Funcionalidades Principais
 
-1. Abra `index.html` em um navegador.
-2. Use a aba **Entrar** para acessar uma conta existente.
-3. Use a aba **Cadastrar** para criar uma nova conta.
-4. Após cadastro, o formulário leva você automaticamente para a tela de login.
-5. Ao efetuar login, a aplicação exibe uma tela de boas-vindas.
+- 🔑 **Autenticação dupla**: Login e cadastro com alternância entre as telas
+- ✅ **Validação de formulário**: Validação em cliente para todos os campos em tempo real
+- 👤 **Cadastro completo**: Nome, data de nascimento, telefone, sexo, e-mail e senha
+- 🛡️ **Proteção de dados**: Prevenção de cadastro com e-mail duplicado
+- 💾 **Armazenamento local**: Dados persistidos no `localStorage` do navegador
+- 🎯 **Feedback visual**: Mensagens de erro específicas em cada campo
+- 🎉 **Sessão ativa**: Tela de boas-vindas após login bem-sucedido
 
-## Estrutura do projeto
+---
 
-- `index.html` — interface de login e cadastro.
-- `style.css` — layout moderno e responsivo.
-- `script.js` — lógica de alternância, validação e armazenamento.
-- `imagem/` — pasta de imagens.
+## 🚀 Como Utilizar
 
-## Tecnologias
+1. **Abra a aplicação**: Clique duas vezes em `index.html` ou abra em seu navegador
+2. **Novo usuário**:
+   - Clique na aba **Cadastrar**
+   - Preencha todos os campos obrigatórios
+   - Clique em **Cadastrar-se**
+3. **Usuário existente**:
+   - Clique na aba **Entrar**
+   - Digite e-mail e senha cadastrados
+   - Clique em **Entrar**
+4. **Após login**: Visualize a tela de boas-vindas com confirmação de acesso
 
-- HTML5
-- CSS3
-- JavaScript
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5** — Marcação semântica e formulários
+- **CSS3** — Layout responsivo com Flexbox/Grid
+- **JavaScript (Vanilla)** — Lógica de negócio e manipulação do DOM
+- **localStorage API** — Persistência de dados no navegador

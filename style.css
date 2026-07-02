@@ -4,20 +4,11 @@
   padding: 0;
 }
 
-html,
-body {
+html, body {
   min-height: 100%;
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #0f172a;
-  background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 28%),
-    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 28%), linear-gradient(180deg, #0f172a 0%, #111827 100%);
 }
 
 body {
@@ -155,8 +146,7 @@ h1 {
   transition: color 0.2s ease;
 }
 
-.password-toggle:hover,
-.password-toggle:focus-visible {
+.password-toggle:hover, .password-toggle:focus-visible {
   color: #1d4ed8;
 }
 
@@ -218,8 +208,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-.form-group,
-.gender-group {
+.form-group, .gender-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -292,8 +281,7 @@ input[type="password"]:focus {
   font-size: 0.88rem;
 }
 
-.submit-button,
-.link-button {
+.submit-button, .link-button {
   width: 100%;
   padding: 14px 18px;
   border: none;
@@ -393,8 +381,7 @@ input[type="password"]:focus {
     grid-template-columns: 1fr;
   }
 
-  .submit-button,
-  .link-button {
+  .submit-button, .link-button {
     width: 100%;
   }
 }

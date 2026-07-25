@@ -6,14 +6,15 @@ const toggleButtons = document.querySelectorAll("[data-toggle-form]");
 const passwordToggles = document.querySelectorAll(".password-toggle");
 const formTitle = document.getElementById("form-title");
 const welcomeScreen = document.getElementById("welcome-screen");
-const welcomeName = document.getElementById("welcome-name");
-const welcomeEmail = document.getElementById("welcome-email");
 const dashName = document.getElementById("dash-name");
 const dashEmail = document.getElementById("dash-email");
 const dashBirth = document.getElementById("dash-birth");
 const dashPhone = document.getElementById("dash-phone");
 const logoutButton = document.getElementById("logout-button");
 const recoveryMessage = document.getElementById("recovery-message");
+const loginStatus = document.getElementById("login-status");
+const registerStatus = document.getElementById("register-status");
+const recoveryStatus = document.getElementById("recovery-status");
 const storageKey = "formularioUsuarios";
 
 function getUsers() {
@@ -46,6 +47,9 @@ function setActiveView(view) {
   clearFormErrors(loginForm);
   clearFormErrors(registerForm);
   clearFormErrors(recoveryForm);
+  clearStatus(loginStatus);
+  clearStatus(registerStatus);
+  clearStatus(recoveryStatus);
   if (recoveryMessage) recoveryMessage.textContent = "";
 }
 
@@ -58,6 +62,19 @@ function clearFormErrors(form) {
   errors.forEach((el) => {
     el.textContent = "";
   });
+}
+
+function showStatus(element, message, type = "success") {
+  if (!element) return;
+  element.textContent = message;
+  element.classList.remove("success", "error");
+  element.classList.add(type);
+}
+
+function clearStatus(element) {
+  if (!element) return;
+  element.textContent = "";
+  element.classList.remove("success", "error");
 }
 
 function isValidEmail(email) {
@@ -75,8 +92,6 @@ function findUserByEmail(email) {
 }
 
 function showWelcome(user) {
-  welcomeName.textContent = `Nome: ${user.nome}`;
-  welcomeEmail.textContent = `E-mail: ${user.email}`;
   dashName.textContent = user.nome;
   dashEmail.textContent = user.email;
   dashBirth.textContent = user.nascimento || "Não informado";
@@ -130,9 +145,12 @@ function handleLogin(event) {
   const user = findUserByEmail(email);
   if (!user || user.senha !== password) {
     showError(passwordError, "E-mail ou senha incorretos.");
+    alert("E-mail ou senha incorretos.");
     return;
   }
 
+  loginForm.reset();
+  alert(`Seja bem-vindo, ${user.nome}!`);
   showWelcome(user);
 }
 
@@ -212,9 +230,9 @@ function handleRegister(event) {
   users.push({ nome, nascimento, telefone, email, senha, sexo });
   saveUsers(users);
 
-  alert("Conta criada com sucesso! Agora você pode entrar.");
   registerForm.reset();
   setActiveView("login");
+  alert("Cadastro realizado com sucesso!");
 }
 
 function handleRecovery(event) {
@@ -239,11 +257,13 @@ function handleRecovery(event) {
   const user = findUserByEmail(email);
   if (!user) {
     showError(emailError, "Nenhuma conta encontrada com este e-mail.");
+    alert("Nenhuma conta encontrada com este e-mail.");
     return;
   }
 
   recoveryMessage.textContent = `Se o e-mail ${email} estiver cadastrado, você receberá instruções de recuperação em breve.`;
   recoveryMessage.style.color = "#2563eb";
+  alert("Instruções de recuperação enviadas para o e-mail informado.");
 }
 
 function handleTabClick(event) {

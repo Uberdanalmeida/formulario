@@ -1,3 +1,5 @@
+![Formulário de Login e Cadastro](imagem/login-entrar.png)
+
 # 🔐 Formulário de Login e Cadastro
 
 Aplicação web de autenticação com interface moderna, responsiva e funcional, desenvolvida com HTML, CSS e JavaScript puro.

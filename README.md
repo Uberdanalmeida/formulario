@@ -1,45 +1,36 @@
 # 🔐 Formulário de Login e Cadastro
 
-Uma aplicação web completa e profissional de autenticação de usuários com interface intuitiva e responsiva.
+Aplicação web de autenticação com interface moderna, responsiva e funcional, desenvolvida com HTML, CSS e JavaScript puro.
 
----
+## 📌 Sobre o projeto
 
-## 📋 Sobre o Projeto
+Este projeto simula um fluxo completo de acesso do usuário com telas de login, cadastro, recuperação de senha e uma área de boas-vindas após autenticação. Os dados dos usuários são armazenados localmente no navegador por meio do localStorage, o que permite testar o cadastro e o login sem necessidade de backend.
 
-Este projeto implementa um sistema completo de autenticação com telas de login e cadastro integradas em um único painel. A aplicação oferece uma experiência de usuário fluida, com validação em tempo real, armazenamento seguro de dados no navegador e feedback visual para cada ação do usuário.
+## ✨ Funcionalidades
 
----
+- Alternância entre as telas de Entrar, Cadastrar e Recuperar senha
+- Validação de campos obrigatórios antes do envio
+- Cadastro com nome, data de nascimento, telefone, sexo, e-mail e senha
+- Verificação de e-mail duplicado para evitar cadastros repetidos
+- Login com autenticação local usando os dados salvos no navegador
+- Exibição de uma tela de boas-vindas com informações do usuário logado
+- Botão para mostrar ou ocultar a senha
+- Layout responsivo para telas menores e maiores
 
-## ✨ Funcionalidades Principais
+## 🛠️ Tecnologias utilizadas
 
-- 🔑 **Autenticação dupla**: Login e cadastro com alternância entre as telas
-- ✅ **Validação de formulário**: Validação em cliente para todos os campos em tempo real
-- 👤 **Cadastro completo**: Nome, data de nascimento, telefone, sexo, e-mail e senha
-- 🛡️ **Proteção de dados**: Prevenção de cadastro com e-mail duplicado
-- 💾 **Armazenamento local**: Dados persistidos no `localStorage` do navegador
-- 🎯 **Feedback visual**: Mensagens de erro específicas em cada campo
-- 🎉 **Sessão ativa**: Tela de boas-vindas após login bem-sucedido
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- localStorage
 
----
+## 📁 Estrutura do projeto
 
-## 🚀 Como Utilizar
+- index.html: estrutura da interface e dos formulários
+- style.css: estilos, responsividade e aparência visual
+- script.js: lógica de validação, navegação entre telas e persistência de dados
 
-1. **Abra a aplicação**: Clique duas vezes em `index.html` ou abra em seu navegador
-2. **Novo usuário**:
-   - Clique na aba **Cadastrar**
-   - Preencha todos os campos obrigatórios
-   - Clique em **Cadastrar-se**
-3. **Usuário existente**:
-   - Clique na aba **Entrar**
-   - Digite e-mail e senha cadastrados
-   - Clique em **Entrar**
-4. **Após login**: Visualize a tela de boas-vindas com confirmação de acesso
+## ℹ️ Observações
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5** — Marcação semântica e formulários
-- **CSS3** — Layout responsivo com Flexbox/Grid
-- **JavaScript (Vanilla)** — Lógica de negócio e manipulação do DOM
-- **localStorage API** — Persistência de dados no navegador
+- Os dados ficam salvos apenas no navegador do usuário.
+- A recuperação de senha é uma simulação visual e não envia e-mails reais.
